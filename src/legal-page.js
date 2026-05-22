@@ -1,4 +1,9 @@
 import './style.css';
+import { inject } from '@vercel/analytics';
+
+inject({
+  mode: import.meta.env.DEV ? 'development' : 'production'
+});
 
 const LANGUAGE_STORAGE_KEY = 'oicmap:lang';
 
